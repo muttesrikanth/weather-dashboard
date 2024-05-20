@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.search input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.user-type {
+  margin: 20px 0;
+}
+
+.user-type label {
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.weather-info {
+  margin-top: 20px;
+  
+}
+
+.error {
+  color: red;
+}
+.app {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
