@@ -21,9 +21,8 @@ const App = () => {
   }, [location]);
 
   const fetchWeather = async () => {
-    setError(null); // Reset previous errors
+    setError(null);
     try {
-      // Fetch coordinates from OpenWeatherMap Geocoding API
       const geoResponse = await axios.get(
         `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=358a7cbe7380f0bdaeef008aebb8bf94`
       );
@@ -34,16 +33,12 @@ const App = () => {
       }
 
       const { lat, lon } = geoResponse.data[0];
-
-      // Fetch weather data from Open-Meteo using the coordinates
       const weatherResponse = await axios.get(
         `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`
       );
 
       const currentWeather = weatherResponse.data.current_weather;
       setWeather(currentWeather);
-
-      // Set background image based on weather condition
       if (currentWeather.weathercode < 3) {
         setBackgroundImage(weatherBackgrounds.clear);
       } else if (currentWeather.weathercode < 6) {
@@ -53,7 +48,6 @@ const App = () => {
       } else if (currentWeather.weathercode < 13) {
         setBackgroundImage(weatherBackgrounds.snow);
       }
-      // Add more conditions as needed
     } catch (error) {
       setError('Error fetching weather data. Please try again.');
     }
