@@ -2,6 +2,49 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+---
+
+# Weather Dashboard Application
+
+### Introduction
+
+I have created a simple and informative weather dashboard application. The app includes a search input for locating specific places, and it provides engaging options for different user types: travelers, farmers, and event planners, displaying relevant weather data for each.
+
+### Personal Experience Integration
+
+In this weather app, users can enter a location to view the corresponding temperature and weather conditions. The app features user-friendly radio buttons for selecting different user types. I used two free APIs to display weather data: 
+- 'open-meteo' to find weather using longitude and latitude.
+- 'openweathermap.org' to get longitude and latitude based on location input.
+
+### Creative Feature Development
+
+I developed a feature that changes the background image according to the weather conditions, such as clear, cloudy, rain, and snow. The background images change based on the weather codes provided by the API. However, sometimes the API does not provide perfect images that match the temperature.
+
+### User-Centric Design
+
+The app includes a user-centric design with radio buttons for different user types: traveler, farmer, and event planner. Initially, the same data is shown for all types, but with custom APIs, we can improve and provide more specific data for each user type.
+
+### Problem-Solving and Adaptation
+
+Designing a simple yet responsive dashboard was crucial. The most challenging part was choosing the perfect API, as many have limited calls and provide inconsistent data. I used mock data with a JSON server during development, which worked well but had limited locations. Eventually, I found the open-meteo API to be the most reliable and integrated it.
+
+### Deployment
+
+To deploy the app:
+1. Create a build file in React by typing `npm run build`.
+2. Open [Netlify](https://www.netlify.com) and navigate to the "Sites" section.
+3. Drag and drop the build file to start the deployment process.
+4. Click the "Open Production Deploy" button to view the live site.
+
+### Live Site
+
+You can view the live site at [this link](https://665ef3efdc7eba08168bca54--guileless-donut-0a8162.netlify.app/).
+
+---
+
+Feel free to let me know if there are any other specific adjustments you'd like to make!
+
 ## Available Scripts
 
 In the project directory, you can run:
